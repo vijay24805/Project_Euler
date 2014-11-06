@@ -1,0 +1,18 @@
+1. Difference between range and xrange:
+
+
+->The advantage of the xrange type is that an xrange object will always take the same amount of memory, 
+no matter the size of the range it represents. There are no consistent performance advantages.
+
+range creates a list, so if you do range(1, 10000000) it creates a list in memory with 10000000 elements. xrange is a generator, so it evaluates lazily.
+
+This brings you two advantages:
+
+You can iterate longer lists without getting a stackoverflow error.
+As it resolves each number lazily, if you skip the iteration early, you wont have the penalization of the creation of the whole list.
+
+Reference - http://stackoverflow.com/questions/94935/what-is-the-difference-between-range-and-xrange
+
+2. Used to cmp(temp1,temp2) , compare two elements(list, int, str etc..)
+
+3. To combile all elements of a list temp2 use -> ''.join(temp2)
