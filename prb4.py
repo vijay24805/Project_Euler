@@ -7,7 +7,7 @@ import time
 
 
 """
-Storing all three digit numers
+Storing all three digit numbers
 """
 def three_digit_num():
     number=[]
@@ -38,7 +38,7 @@ def find_palindrome():
     palindrome_num=[]
     for x in each_product:
         str_value=str(x)
-        temp1=temp2=[]
+        temp1=temp2=[] # Used to compare a number to its reverse
         for digit in str_value:
             temp1.append(digit)
         temp2=list(temp1)
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 	three_digit_num()
 	product_of_num()
 	print find_palindrome()
-	print "Time taken" + str(time.clock() - start)
+	print "Time taken - " + str(time.clock() - start)
 
 
 	
